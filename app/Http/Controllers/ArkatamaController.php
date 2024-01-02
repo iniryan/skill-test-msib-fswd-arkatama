@@ -20,7 +20,7 @@ class ArkatamaController extends Controller
 
         $age = (int)$age;
         Arkatama::create([
-            'name' => $name,
+            'name' => strtoupper($name),
             'age' => $age,
             'city' => $city
         ]);
