@@ -45,7 +45,7 @@ class ArkatamaController extends Controller
     
         $name = trim($name);
         $age = trim($age);
-        $city = strtoupper(trim(preg_replace('/THN|TH|TAHUN/', '', $city)));
+        $city = strtoupper(trim(preg_replace('/(THN|TH|TAHUN|thn|th|tahun|Tahun|Thn|Th)/', '', $city)));
     
         return [$name, $age, $city];
     }
